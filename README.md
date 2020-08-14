@@ -19,8 +19,6 @@ My name is Luiz Carlos, I am a <strong>full-Stack</strong> programmer doing seve
 
 ## ***Projetos / Projects :computer:***
 <br />
-
-<div>
   <a href="https://github.com/LuizCarlosVilela/nlw-2-web#readme">
     <img align="left" src="https://github-readme-stats.vercel.app/api/pin/?username=LuizCarlosVilela&repo=nlw-2-web&theme=tokyonight&show_icons=true" />
   </a>
@@ -33,11 +31,6 @@ My name is Luiz Carlos, I am a <strong>full-Stack</strong> programmer doing seve
   <a href="https://github.com/LuizCarlosVilela/NextLevelWeek-2#readme">
     <img align="left" src="https://github-readme-stats.vercel.app/api/pin/?username=LuizCarlosVilela&repo=NextLevelWeek-2&theme=tokyonight&show_icons=true&card_width=10" />
   </a>
-  <a href="https://github.com/LuizCarlosVilela/NextLevelWeek-2#readme">
-    <img align="left" src="https://github-readme-stats.vercel.app/api/pin/?username=LuizCarlosVilela&repo=backend-AppCovid&theme=tokyonight&show_icons=true&card_width=10" />
-  </a>
-</div>
-<h2>Alerta-COVID19 - ReactNative e Node.js</h2>
   <a href="https://github.com/LuizCarlosVilela/NextLevelWeek-2#readme">
     <img align="left" src="https://github-readme-stats.vercel.app/api/pin/?username=LuizCarlosVilela&repo=backend-AppCovid&theme=tokyonight&show_icons=true&card_width=10" />
   </a>
