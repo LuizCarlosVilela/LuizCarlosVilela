@@ -31,6 +31,9 @@ My name is Luiz Carlos, I am a <strong>full-Stack</strong> programmer doing seve
   <a href="https://github.com/LuizCarlosVilela/NextLevelWeek-2#readme">
     <img align="left" src="https://github-readme-stats.vercel.app/api/pin/?username=LuizCarlosVilela&repo=NextLevelWeek-2&theme=tokyonight&show_icons=true&card_width=10" />
   </a>
-  <a href="https://github.com/LuizCarlosVilela/NextLevelWeek-2#readme">
+  <a href="https://github.com/LuizCarlosVilela/backend-AppCovid#readme">
     <img align="left" src="https://github-readme-stats.vercel.app/api/pin/?username=LuizCarlosVilela&repo=backend-AppCovid&theme=tokyonight&show_icons=true&card_width=10" />
+  </a>
+  <a href="https://github.com/scsSilva/Alerta-Covid#readme">
+    <img align="left" src="https://github-readme-stats.vercel.app/api/pin/?username=scsSilva&repo=Alerta-Covid&theme=tokyonight&show_icons=true&card_width=10" />
   </a>
