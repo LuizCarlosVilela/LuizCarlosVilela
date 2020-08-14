@@ -12,12 +12,3 @@ My name is Luiz Carlos, I am a <strong>full-Stack</strong> programmer doing seve
 * Back-end 
 * Front-end (Web and Mobile)
 * IoT (Internet Of Things)
-
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=LuizCarlosVilela" alt="Top languages"/>
-
-<img src="https://github-readme-stats.vercel.app/api?username=LuizCarlosVilela&count_private=true&show_icons=true&theme=tokyonight&hide=contribs,prs" alt="Git Stats" />
-
-<a href="https://github.com/LuizCarlosVilela/NextLevelWeek-2/blob/master/README.md">
-  <img align="left" src="https://github-readme-stats.vercel.app/api/pin/?username=LuizCarlosVilela&repo=NextLevelWeek-2" />
-</a>
-
