@@ -1,17 +1,6 @@
 ### Olá / Hi 👋
 
-<img src="https://img.shields.io/badge/-HTML%205-E34F26?logo=HTML5&logoColor=white&labelColor=E34F26" alt="Html" /> 
-<img src="https://img.shields.io/badge/-CSS%203-1572B6?logo=CSS3&logoColor=white&labelColor=1572B6" alt="CSS" /> 
-<img src="https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=white&labelColor=F7DF1E" alt="JavaScript" /> 
-<img src="https://img.shields.io/badge/-TypeScript-007ACC?logo=typescript&logoColor=white&labelColor=007ACC" alt="Typescript" />
-<img src="https://img.shields.io/badge/-React%20JS-61DAFB?logo=react&logoColor=white&labelColor=61DAFB" alt="React" />
-<img src="https://img.shields.io/badge/-Angular%20-DD0031?logo=Angular&logoColor=white&labelColor=DD0031" alt="Angular" />
-<img src="https://img.shields.io/badge/-Node%20JS-green?logo=node.js&logoColor=white&labelColor=green" alt="Node" />
-<img src="https://img.shields.io/badge/-Php%20-777BB4?logo=Php&logoColor=white&labelColor=777BB4" alt="Php" />
-<img src="https://img.shields.io/badge/-Laravel%20-FF2D20?logo=Laravel&logoColor=white&labelColor=FF2D20" alt="Laravel" />
-<img src="https://img.shields.io/badge/-Java%20-007396?logo=Java&logoColor=white&labelColor=007396" alt="Java" />
-
-
+<img src="https://img.shields.io/badge/-HTML%205-E34F26?logo=HTML5&logoColor=white&labelColor=E34F26" alt="Html" /> <img src="https://img.shields.io/badge/-CSS%203-1572B6?logo=CSS3&logoColor=white&labelColor=1572B6" alt="CSS" /> <img src="https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=white&labelColor=F7DF1E" alt="JavaScript" /> <img src="https://img.shields.io/badge/-TypeScript-007ACC?logo=typescript&logoColor=white&labelColor=007ACC" alt="Typescript" /> <img src="https://img.shields.io/badge/-React%20JS-61DAFB?logo=react&logoColor=white&labelColor=61DAFB" alt="React" /> <img src="https://img.shields.io/badge/-Angular%20-DD0031?logo=Angular&logoColor=white&labelColor=DD0031" alt="Angular" /> <img src="https://img.shields.io/badge/-Node%20JS-green?logo=node.js&logoColor=white&labelColor=green" alt="Node" /> <img src="https://img.shields.io/badge/-Php%20-777BB4?logo=Php&logoColor=white&labelColor=777BB4" alt="Php" /> <img src="https://img.shields.io/badge/-Laravel%20-FF2D20?logo=Laravel&logoColor=white&labelColor=FF2D20" alt="Laravel" /> <img src="https://img.shields.io/badge/-Java%20-007396?logo=Java&logoColor=white&labelColor=007396" alt="Java" /> <img src="https://img.shields.io/badge/-Python-3776AB?logo=Python&logoColor=white&labelColor=3776AB" alt="Python" /> <img src="https://img.shields.io/badge/-SQlite%203-003B57?logo=SQlite&logoColor=white&labelColor=003B57" alt="SQlite3" /> <img src="https://img.shields.io/badge/-MySQL-4479A1?logo=MySQL&logoColor=white&labelColor=4479A1" alt="MySQL" /> <img src="https://img.shields.io/badge/-PostgreSQL-336791?logo=MySQL&logoColor=white&labelColor=336791" alt="PostgreSQL" />
 
 Meu nome é <strong>Luiz Carlos</strong>, sou programador <strong>full-Stack</strong> faço vários projetos web, mobile e também automações industriais. Atualmente sou discente e bolsista no [Instituto Federal de Alagoas - IFAL](https://www2.ifal.edu.br/campus/maceio) 🏫, onde faço projetos com automações usando microcontroladores e diversos móodulos de controles.
 
