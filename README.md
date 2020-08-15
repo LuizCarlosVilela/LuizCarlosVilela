@@ -6,7 +6,7 @@ Meu nome é <strong>Luiz Carlos</strong>, sou programador <strong>full-Stack</st
 <strong> for English </strong> <br/>
 My name is Luiz Carlos, I am a <strong>full-Stack</strong> programmer doing several web projects, mobile and also industrial automations. I am currently a student and a fellow at the Federal Institute of Alagoas - IFAL 🏫, where I do projects with automations using microcontrollers and several control modules.
 
-#### ***Contact***
+#### ***Contact :man:***
 
 <a href="https://www.linkedin.com/in/luiz-carlos-vilela/">
   <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?&style=flat-square&logo=linkedin&logoColor=white" alt="badge-linkedin"/>
