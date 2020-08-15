@@ -8,12 +8,12 @@ My name is Luiz Carlos, I am a <strong>full-Stack</strong> programmer doing seve
 
 #### ***Contact :man:***
 
-<a href="https://www.linkedin.com/in/luiz-carlos-vilela/">
-  <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?&style=flat-square&logo=linkedin&logoColor=white" alt="badge-linkedin"/>
-</a>
+<a href="https://www.linkedin.com/in/luiz-carlos-vilela" target="_blank"> 
+    <img src="https://img.shields.io/badge/Developer-Luiz%20Carlos-brightgreen?style=flat&logo=Linkedin&logoColor=white" alt="Developer link" />
+  </a>
 
 <a href="mailto:luizcarlosvilela@outlook.com.br">
-  <img src="https://img.shields.io/badge/-luizcarlosvilela@outlook.com.br-054f77?style=flat-square&logo=microsoft-outlook&logoColor=white&link=mailto:luizcarlosvilela@outlook.com.br/" alt="badge-outlook"/>
+  <img src="https://img.shields.io/badge/-luizcarlosvilela@outlook.com.br-054f77?style=flat&logo=microsoft-outlook&logoColor=white&link=mailto:luizcarlosvilela@outlook.com.br/" alt="badge-outlook"/>
 </a>
 
 ## ***Áreas de Conhecimento 📚***
