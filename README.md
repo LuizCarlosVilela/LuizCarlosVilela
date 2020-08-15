@@ -2,6 +2,8 @@
 
 [![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/luiz-carlos-vilela)](https://www.linkedin.com/in/luiz-carlos-vilela)
 
+  <a href="mailto:luizcarlosvilela@outlook.com.br"><img src="https://img.shields.io/badge/-luizcarlosvilela@outlook.com.br-054f77?style=flat-square&logo=microsoft-outlook&logoColor=white&link=mailto:luizcarlosvilela@outlook.com.br/" alt="badge-outlook"/></a>
+
 Meu nome é <strong>Luiz Carlos</strong>, sou programador <strong>full-Stack</strong> faço vários projetos web, mobile e também automações industriais. Atualmente sou discente e bolsista no [Instituto Federal de Alagoas - IFAL](https://www2.ifal.edu.br/campus/maceio) 🏫, onde faço projetos com automações usando microcontroladores e diversos móodulos de controles.
 
 <strong> for English </strong> <br/>
