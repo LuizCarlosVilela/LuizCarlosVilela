@@ -17,9 +17,9 @@ My name is Luiz Carlos, I am a <strong>full-Stack</strong> programmer doing seve
 
 ## ***Áreas de Conhecimento 📚***
 
-* Back-end 
-* Front-end (Web and Mobile)
-* IoT (Internet Of Things)
+* ***Back-end*** 
+* ***Front-end (Web and Mobile)***
+* ***IoT (Internet Of Things)***
 
 
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=LuizCarlosVilela&layout=compact" alt="Top languages"/>
@@ -30,20 +30,8 @@ My name is Luiz Carlos, I am a <strong>full-Stack</strong> programmer doing seve
 ## ***Projetos Principais / Projects :computer:***
 <br />
 
-<a href="https://github.com/LuizCarlosVilela/nlw-2-web#readme">
-    <img align="left" src="https://github-readme-stats.vercel.app/api/pin/?username=LuizCarlosVilela&repo=nlw-2-web&theme=tokyonight&show_icons=true" />
-  </a>
-  <a href="https://github.com/LuizCarlosVilela/nlw-2-mobile#readme">
-    <img align="left" src="https://github-readme-stats.vercel.app/api/pin/?username=LuizCarlosVilela&repo=nlw-2-mobile&theme=tokyonight&show_icons=true" />
-  </a>
-  <a href="https://github.com/LuizCarlosVilela/nlw-2-web#readme">
-    <img align="left" src="https://github-readme-stats.vercel.app/api/pin/?username=LuizCarlosVilela&repo=nlw-2-backend&theme=tokyonight&show_icons=true" />
-  </a>
   <a href="https://github.com/LuizCarlosVilela/NextLevelWeek-2#readme">
     <img align="left" src="https://github-readme-stats.vercel.app/api/pin/?username=LuizCarlosVilela&repo=NextLevelWeek-2&theme=tokyonight&show_icons=true" />
-  </a>
-  <a href="https://github.com/LuizCarlosVilela/backend-AppCovid#readme">
-    <img align="left" src="https://github-readme-stats.vercel.app/api/pin/?username=LuizCarlosVilela&repo=backend-AppCovid&theme=tokyonight&show_icons=true" />
   </a>
   <a href="https://github.com/scsSilva/Alerta-Covid#readme">
     <img align="left" src="https://github-readme-stats.vercel.app/api/pin/?username=scsSilva&repo=Alerta-Covid&theme=tokyonight&show_icons=true" />
