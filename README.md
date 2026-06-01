@@ -1,6 +1,6 @@
 ### Olá / Hi 👋
 
-Sou Luiz, trabalho com desenvolvimento há mais de 4 anos como Desenvolvedor Full Stack focado em Stack Node. Tendo trabalhado no front-end com NextJS(React), React Native e Vue. Enquanto no Back com Express e NestJS e ORM'S como Prisma, TypeOr, Knex e também infraestrutura na infraestrutura com AWS e GCP (Google Cloud Platform).
+Sou Luiz, trabalho com desenvolvimento há mais de 8 anos como Desenvolvedor Full Stack focado em Stack Node. Tendo trabalhado no front-end com NextJS(React), React Native e Vue. Enquanto no Back com Express e NestJS e ORM'S como Prisma, TypeOr, Knex e também infraestrutura na infraestrutura com AWS e GCP (Google Cloud Platform).
 
 <strong> for English </strong> <br/>
 I'm Luiz, I've been working with development for over 4 years as a Full Stack Developer focused on Stack Node. Having worked on the front end with NextJS(React), React Native and Vue. While in the Back with Express and NestJS and ORM'S like Prisma, TypeOr, Knex and also infrastructure in the infrastructure with AWS and GCP (Google Cloud Platform).
