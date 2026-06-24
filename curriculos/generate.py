@@ -440,9 +440,9 @@ def render_resume(resume: dict[str, object]) -> str:
   <title>{esc(PROFILE["name"])} - {esc(resume["title"])}</title>
   <style>
     :root {{
-      --teal: #2f8274;
-      --teal-dark: #24675c;
-      --teal-soft: #e7f2ef;
+      --royal: #1f4fbf;
+      --royal-dark: #173a8c;
+      --royal-soft: #e8efff;
       --ink: #2d333a;
       --muted: #69727c;
       --line: #dbe3e8;
@@ -481,7 +481,7 @@ def render_resume(resume: dict[str, object]) -> str:
     }}
 
     .sidebar {{
-      background: linear-gradient(180deg, var(--teal) 0%, var(--teal-dark) 100%);
+      background: linear-gradient(180deg, var(--royal) 0%, var(--royal-dark) 100%);
       color: #fff;
       padding: 12mm 8mm;
     }}
@@ -517,7 +517,7 @@ def render_resume(resume: dict[str, object]) -> str:
 
     .photo-fallback {{
       align-items: center;
-      color: var(--teal-dark);
+      color: var(--royal-dark);
       display: flex;
       font-size: 26px;
       font-weight: 900;
@@ -576,7 +576,7 @@ def render_resume(resume: dict[str, object]) -> str:
     }}
 
     .top {{
-      border-bottom: 2px solid var(--teal);
+      border-bottom: 2px solid var(--royal);
       margin-bottom: 12px;
       padding-bottom: 12px;
     }}
@@ -604,9 +604,9 @@ def render_resume(resume: dict[str, object]) -> str:
     }}
 
     .badges span {{
-      background: var(--teal-soft);
+      background: var(--royal-soft);
       border-radius: 999px;
-      color: var(--teal-dark);
+      color: var(--royal-dark);
       font-size: 10.5px;
       font-weight: 900;
       padding: 4px 8px;
@@ -619,14 +619,14 @@ def render_resume(resume: dict[str, object]) -> str:
 
     .summary {{
       background: var(--panel);
-      border-left: 4px solid var(--teal);
+      border-left: 4px solid var(--royal);
       border-radius: 7px;
       margin: 0 0 10px;
       padding: 10px 12px;
     }}
 
     .summary strong {{
-      color: var(--teal-dark);
+      color: var(--royal-dark);
     }}
 
     .metrics {{
@@ -637,7 +637,7 @@ def render_resume(resume: dict[str, object]) -> str:
     }}
 
     .metric {{
-      background: var(--teal-soft);
+      background: var(--royal-soft);
       border-radius: 7px;
       min-width: 0;
       padding: 8px 9px;
@@ -659,7 +659,7 @@ def render_resume(resume: dict[str, object]) -> str:
 
     h2 {{
       align-items: center;
-      color: var(--teal-dark);
+      color: var(--royal-dark);
       display: flex;
       font-size: 12.5px;
       gap: 8px;
@@ -751,7 +751,7 @@ def render_resume(resume: dict[str, object]) -> str:
     }}
 
     li::marker {{
-      color: var(--teal);
+      color: var(--royal);
     }}
 
     .project-grid {{
@@ -761,7 +761,7 @@ def render_resume(resume: dict[str, object]) -> str:
     }}
 
     .kind {{
-      color: var(--teal);
+      color: var(--royal);
       display: block;
       font-size: 9.5px;
       font-weight: 900;

@@ -41,7 +41,7 @@ python3 curriculos/generate.py --html-only
 4. Separacao por vaga/stack, evitando um curriculo generico com muitas tecnologias competindo por atencao.
 5. Projetos publicos do GitHub entram como prova tecnica complementar, sem competir com as entregas profissionais.
 6. Tecnologias agrupadas por contexto: Mobile, Backend, eventos, dados, cloud, Angular, React, Java, UI e entrega.
-7. Redesign visual com sidebar verde, foto/avatar circular, cabecalho limpo, cards de metricas e experiencias em destaque.
+7. Redesign visual com sidebar azul royal, foto/avatar circular, cabecalho limpo, cards de metricas e experiencias em destaque.
 
 ## Observacao sobre ATS
 
