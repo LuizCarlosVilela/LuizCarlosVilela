@@ -20,6 +20,8 @@ python3 curriculos/generate.py
 ```
 
 Sem esse arquivo, o gerador usa um avatar temporario com as iniciais `LC`.
+Observacao: imagens coladas diretamente na conversa podem nao ficar disponiveis como arquivo no workspace; nesse caso,
+salve a foto em `curriculos/assets/profile-photo.jpg` antes de gerar os PDFs.
 
 ## Como gerar novamente
 
@@ -42,6 +44,8 @@ python3 curriculos/generate.py --html-only
 5. Projetos publicos do GitHub entram como prova tecnica complementar, sem competir com as entregas profissionais.
 6. Tecnologias agrupadas por contexto: Mobile, Backend, eventos, dados, cloud, Angular, React, Java, UI e entrega.
 7. Redesign visual com sidebar azul royal, foto/avatar circular, cabecalho limpo, cards de metricas e experiencias em destaque.
+8. Contatos clicaveis no PDF: WhatsApp, e-mail, LinkedIn e GitHub.
+9. Experiencias profissionais organizadas na ordem do PDF exportado do LinkedIn.
 
 ## Observacao sobre ATS
 

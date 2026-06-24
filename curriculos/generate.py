@@ -31,9 +31,13 @@ PROFILE = {
     "title": "Engenheiro de Software Senior",
     "focus": "Backend - Mobile - RPA",
     "phone": "82 9 9189-0441",
+    "whatsapp_url": "https://wa.me/5582991890441",
     "email": "luizcarlosvilela@outlook.com.br",
+    "email_url": "mailto:luizcarlosvilela@outlook.com.br",
     "linkedin": "linkedin.com/in/luiz-carlos-vilela",
+    "linkedin_url": "https://www.linkedin.com/in/luiz-carlos-vilela/",
     "github": "github.com/LuizCarlosVilela",
+    "github_url": "https://github.com/LuizCarlosVilela",
     "location": "Maceio, Alagoas, Brasil",
     "summary": (
         "Engenheiro de Software Senior com ampla experiencia em sistemas de alta complexidade "
@@ -103,6 +107,16 @@ BASE_EXPERIENCES = {
             "Conciliacao de aproximadamente R$335 milhoes em transacoes com robos e motor de inteligencia desenvolvido internamente.",
         ],
     },
+    "diallink": {
+        "company": "DIALLINK TECNOLOGIA HUMANIZADA",
+        "role": "Desenvolvedor Full Stack / Desenvolvedor ChatBot",
+        "period": "Mar 2023 - Nov 2024",
+        "location": "Sao Paulo, SP",
+        "bullets": [
+            "Atuacao em desenvolvimento full stack e solucoes de chatbot para produtos digitais.",
+            "Participacao em fluxos de automacao e atendimento, integrando necessidades de negocio com software.",
+        ],
+    },
     "segov": {
         "company": "SEGOV / Policia Civil de Alagoas",
         "role": "Engenheiro de Software Senior",
@@ -113,6 +127,49 @@ BASE_EXPERIENCES = {
             "Criacao e otimizacao de APIs robustas com Node.js, NestJS, Prisma e Docker.",
             "Construcao de aplicacoes server-side renderizadas com Next.js e React.",
             "Estruturacao de arquitetura de microsservicos e dados para o PcDigital.",
+        ],
+    },
+    "beyond": {
+        "company": "Beyond Co.",
+        "role": "Cloud Engineer",
+        "period": "Mar 2022 - Set 2022",
+        "location": "Recife, PE",
+        "bullets": [
+            "Desenho, desenvolvimento e manutencao de aplicacoes full stack web.",
+            "Criacao de APIs RESTful com Node.js, incluindo endpoints, autenticacao, validacao e integracao com bancos relacionais e NoSQL.",
+            "Apoio em testes, debugging e qualidade para garantir estabilidade das entregas.",
+        ],
+    },
+    "prefeitura": {
+        "company": "Prefeitura de Maceio",
+        "role": "Desenvolvedor FullStack Pleno",
+        "period": "Mai 2021 - Jun 2022",
+        "location": "Maceio, AL",
+        "bullets": [
+            "Desenvolvimento em time com React.js e Next.js no front-end e Node.js com Prisma no back-end.",
+            "Atuacao em sistemas com TypeScript e infraestrutura baseada em CPanel/APanel.",
+        ],
+    },
+    "zenix": {
+        "company": "Zenix Technology",
+        "role": "Full Stack Developer / Mobile Developer",
+        "period": "Jan 2021 - Out 2021",
+        "location": "Porto Alegre, RS",
+        "bullets": [
+            "Desenvolvimento mobile freelancer com React Native, Expo, react-native-paper, mapas e tracking com MapView.",
+            "Back-end com Node.js, Express, Knex, JWT e PostgreSQL em ambiente Heroku.",
+            "Atuacao full stack em projetos com JavaScript e TypeScript.",
+        ],
+    },
+    "ifal": {
+        "company": "Instituto Federal de Alagoas",
+        "role": "Full Stack Engineer / IoT Developer",
+        "period": "Out 2018 - Out 2021",
+        "location": "Maceio, AL",
+        "bullets": [
+            "Colaboracao em projetos PIBITI com desenvolvimento back-end, front-end mobile e modelagem de banco de dados.",
+            "Desenvolvimento de automacoes com microcontroladores conectados via Internet das Coisas (IoT).",
+            "Participacao em pesquisa aplicada e projetos academicos de tecnologia.",
         ],
     },
     "i9colab": {
@@ -127,6 +184,21 @@ BASE_EXPERIENCES = {
         ],
     },
 }
+
+
+LINKEDIN_EXPERIENCE_ORDER = [
+    "mentore",
+    "sciensa",
+    "celero",
+    "vink",
+    "diallink",
+    "segov",
+    "i9colab",
+    "beyond",
+    "prefeitura",
+    "zenix",
+    "ifal",
+]
 
 
 EDUCATION = [
@@ -161,7 +233,7 @@ RESUMES = [
             ("Eventos e dados", ["Kafka", "RabbitMQ", "Prisma", "Knex", "PostgreSQL", "Redis", "MySQL"]),
             ("Entrega", ["CI/CD Mobile", "App Store", "Google Play", "Docker", "AWS", "GCP", "Code Review"]),
         ],
-        "experiences": ["mentore", "sciensa", "celero", "vink", "i9colab"],
+        "experiences": LINKEDIN_EXPERIENCE_ORDER,
         "projects": [
             {
                 "name": "App bancario PF - Mentore Bank",
@@ -215,7 +287,7 @@ RESUMES = [
             ("Backend senior", ["Node.js", "NestJS", "REST APIs", "Microsservicos", "Kafka", "RabbitMQ", "RPA"]),
             ("Dados e Cloud", ["PostgreSQL", "MySQL", "Redis", "Docker", "GCP", "AWS", "Oracle Cloud"]),
         ],
-        "experiences": ["celero", "mentore", "vink", "segov", "i9colab"],
+        "experiences": LINKEDIN_EXPERIENCE_ORDER,
         "projects": [
             {
                 "name": "Open Finance PJ - Celero",
@@ -273,7 +345,7 @@ RESUMES = [
             ("Java e backend", ["Java", "Spring Boot", "JUnit", "TDD", "POO", "REST APIs", "Microsservicos"]),
             ("Arquitetura", ["Node.js", "NestJS", "Kafka", "RabbitMQ", "PostgreSQL", "Docker", "AWS/GCP"]),
         ],
-        "experiences": ["vink", "segov", "mentore", "celero", "i9colab"],
+        "experiences": LINKEDIN_EXPERIENCE_ORDER,
         "projects": [
             {
                 "name": "Conciliacao bancaria automatizada - Vink",
@@ -835,10 +907,10 @@ def render_resume(resume: dict[str, object]) -> str:
       <section class="side-section">
         <h2 class="side-title">Contato</h2>
         <ul class="contact-list">
-          <li>{esc(PROFILE["phone"])}</li>
-          <li>{esc(PROFILE["email"])}</li>
-          <li><a href="https://{esc(PROFILE["linkedin"])}">{esc(PROFILE["linkedin"])}</a></li>
-          <li><a href="https://{esc(PROFILE["github"])}">{esc(PROFILE["github"])}</a></li>
+          <li><a href="{esc(PROFILE["whatsapp_url"])}">WhatsApp: {esc(PROFILE["phone"])}</a></li>
+          <li><a href="{esc(PROFILE["email_url"])}">{esc(PROFILE["email"])}</a></li>
+          <li><a href="{esc(PROFILE["linkedin_url"])}">{esc(PROFILE["linkedin"])}</a></li>
+          <li><a href="{esc(PROFILE["github_url"])}">{esc(PROFILE["github"])}</a></li>
           <li>{esc(PROFILE["location"])}</li>
         </ul>
       </section>
