@@ -38,13 +38,14 @@ PROFILE = {
     "linkedin_url": "https://www.linkedin.com/in/luiz-carlos-vilela/",
     "github": "github.com/LuizCarlosVilela",
     "github_url": "https://github.com/LuizCarlosVilela",
-    "location": "Maceio, Alagoas, Brasil",
+    "location": "Maceio, Alagoas, Brasil - Home office",
     "summary": (
-        "Engenheiro de Software Senior com ampla experiencia em sistemas de alta complexidade "
-        "no setor de FinTech e Open Finance. Especialista em arquitetura de microsservicos, "
-        "desenvolvimento mobile com Flutter e automacoes inteligentes (RPA). Historico comprovado "
-        "liderando times tecnicos e construindo produtos que atendem mais de 1 milhao de clientes, "
-        "processando centenas de milhoes em transacoes financeiras."
+        "Sou Engenheiro de Software Senior e atuo ha mais de 8 anos construindo sistemas de "
+        "alta complexidade para FinTech e Open Finance. Trabalho ponta a ponta: arquitetura "
+        "de backend com Node.js e Java, aplicacoes mobile com Flutter e nativo, automacoes "
+        "inteligentes (RPA) e infraestrutura em nuvem. Ja liderei times tecnicos e participei "
+        "de produtos que atendem mais de 1 milhao de clientes PF, mais de 30 mil empresas PJ "
+        "em Open Finance e ja processei cerca de R$335 milhoes em transacoes financeiras."
     ),
 }
 
@@ -59,74 +60,92 @@ METRICS = [
 BASE_EXPERIENCES = {
     "mentore": {
         "company": "Mentore Instituicao de Pagamentos",
-        "role": "Engenheiro de Software Senior",
+        "role": "Engenheiro de Software Senior (Internalizacao)",
         "period": "Jan 2026 - Atual",
-        "location": "Sao Paulo, SP",
+        "location": "Home office - Sao Paulo, SP",
         "bullets": [
-            "Evolucao continua do app Flutter/Dart com novas features, estabilidade e otimizacao de UX.",
-            "Desenvolvimento e evolucao de microsservicos e APIs para sustentar o ecossistema web e mobile.",
-            "Implementacao de solucoes RPA para otimizar fluxos operacionais internos e integrar sistemas legados.",
-            "Gestao do ciclo completo de release e publicacao automatizada nas lojas App Store e Google Play.",
+            "Internalizado depois da consultoria para garantir manutencao, evolucao e escalabilidade do ecossistema de software, expandindo minha atuacao para backend e automacao de processos.",
+            "Continuo evoluindo o app Flutter/Dart com novas features, foco em estabilidade e melhoria de UX.",
+            "Desenvolvo e evoluo microsservicos e APIs estaveis para sustentar o ecossistema web e mobile com seguranca.",
+            "Concebo e implemento solucoes de RPA para otimizar fluxos operacionais internos e integrar sistemas legados.",
+            "Cuido do ciclo completo de release e da publicacao automatizada dos apps na App Store e na Google Play.",
         ],
     },
     "sciensa": {
-        "company": "Sciensa -> Mentore Bank",
-        "role": "Tech Lead Mobile -> Engenheiro de Software Senior",
+        "company": "Sciensa (alocado no Mentore Bank)",
+        "role": "Tech Lead Mobile / Engenheiro de Software Senior",
         "period": "Jun 2025 - Fev 2026",
-        "location": "Sao Paulo, SP",
+        "location": "Home office - Sao Paulo, SP",
         "bullets": [
-            "Arquitetura e desenvolvimento de ponta a ponta do app bancario PF com Flutter, Swift e Kotlin.",
-            "Implementacao de fluxos core: onboarding digital completo, area Pix e solicitacao de cartao.",
-            "Definicao do Design System global e dos padroes de gerenciamento de estado para escala de +1 milhao de clientes.",
-            "Estruturacao de pipelines CI/CD para o ecossistema mobile com foco em qualidade e agilidade.",
-            "Promocao a Tech Lead, com responsabilidade por decisoes arquiteturais, code review e mentoria tecnica.",
+            "Atuei na concepcao e no desenvolvimento de ponta a ponta do aplicativo bancario PF da Mentore, comecando como especialista Flutter e evoluindo para Tech Lead do time mobile.",
+            "Construi o app PF utilizando Flutter no core e nativo em Swift e Kotlin para fluxos especificos.",
+            "Implementei funcionalidades de Core Banking de ponta a ponta: onboarding digital completo para PF, area Pix e fluxo de solicitacao do cartao Swile.",
+            "Defini o Design System global e os padroes de gerenciamento de estado da aplicacao, garantindo consistencia tecnica e escala para mais de 1 milhao de clientes.",
+            "Estruturei e automatizei esteiras de CI/CD para o ecossistema mobile, garantindo qualidade, testes e agilidade.",
+            "Como Tech Lead, assumi as decisoes arquiteturais, revisao de codigo e mentoria do time.",
         ],
     },
     "celero": {
         "company": "Celero",
         "role": "Engenheiro de Software Senior - Open Finance PJ",
         "period": "Jan 2025 - Jun 2025",
-        "location": "Remoto",
+        "location": "Home office",
         "bullets": [
-            "Implementacao de integracoes Open Finance para Caixa Economica Federal e Sicredi.",
-            "Desenvolvimento de fluxos Open Finance PJ sob demanda de clientes bancarios.",
-            "Participacao no desenho de arquitetura orientada a eventos com Kafka e RabbitMQ.",
-            "Processamento assincrono de alto volume em Google Cloud Platform para atender +30 mil empresas.",
+            "Atuei no backend do produto de Open Finance PJ, com integracoes bancarias em larga escala para instituicoes como Sicredi e Caixa Economica Federal.",
+            "Implementei integracoes de Open Finance para Caixa Economica Federal e Sicredi.",
+            "Desenvolvi fluxos de Open Finance PJ para empresas, sob demanda de clientes bancarios.",
+            "Participei do desenho da arquitetura orientada a eventos, com processamento assincrono de alto volume usando Kafka e RabbitMQ.",
+            "Coloquei as solucoes para rodar em Google Cloud Platform (GCP), atendendo mais de 30 mil empresas em milhoes de operacoes bancarias.",
         ],
     },
     "vink": {
         "company": "Vink",
         "role": "Engenheiro de Software Senior",
         "period": "Set 2022 - Jan 2025",
-        "location": "Campinas, SP",
+        "location": "Home office - Campinas, SP",
         "bullets": [
-            "Desenvolvimento de sistemas web e mobile para conciliacao bancaria automatizada.",
-            "Criacao e evolucao de microsservicos Node.js atendendo milhoes de transacoes.",
-            "Aplicacao de DDD, Clean Code e SOLID em sistemas financeiros criticos.",
-            "Integracoes com adquirentes como Cielo, PagSeguro, Stone e GetNet.",
-            "Conciliacao de aproximadamente R$335 milhoes em transacoes com robos e motor de inteligencia desenvolvido internamente.",
+            "Atuei no desenvolvimento de sistemas web e mobile para conciliacao bancaria automatizada, integrando varios adquirentes, bancos e fintechs.",
+            "Desenvolvi solucoes de conciliacao bancaria automatica com apoio de Inteligencia Artificial.",
+            "Criei e evolui microsservicos em Node.js atendendo milhoes de transacoes.",
+            "Desenvolvi aplicacoes web e mobile com React e React Native.",
+            "Apliquei DDD, Clean Code e SOLID em sistemas financeiros criticos.",
+            "Conduzi integracoes com adquirentes como Cielo, PagSeguro, Stone e GetNet.",
+            "Processei e conciliei cerca de R$335 milhoes em transacoes financeiras usando robos e um motor de inteligencia desenvolvido por mim, com monitoramento em tempo real de vendas e repasses.",
         ],
     },
     "diallink": {
-        "company": "DIALLINK TECNOLOGIA HUMANIZADA",
+        "company": "DIALLINK Tecnologia Humanizada",
         "role": "Desenvolvedor Full Stack / Desenvolvedor ChatBot",
         "period": "Mar 2023 - Nov 2024",
-        "location": "Sao Paulo, SP",
+        "location": "Home office - Sao Paulo, SP",
         "bullets": [
-            "Atuacao em desenvolvimento full stack e solucoes de chatbot para produtos digitais.",
-            "Participacao em fluxos de automacao e atendimento, integrando necessidades de negocio com software.",
+            "Trabalhei como desenvolvedor full stack em produtos digitais, com participacao tambem no time de chatbot.",
+            "Atuei em fluxos de automacao e atendimento, conectando necessidades de negocio com solucoes de software.",
         ],
     },
     "segov": {
-        "company": "SEGOV / Policia Civil de Alagoas",
+        "company": "Secretaria de Estado de Governo de Alagoas (SEGOV)",
         "role": "Engenheiro de Software Senior",
         "period": "Out 2021 - Fev 2024",
         "location": "Maceio, AL",
         "bullets": [
-            "Lideranca tecnica em sistemas internos de gestao para a Policia Civil.",
-            "Criacao e otimizacao de APIs robustas com Node.js, NestJS, Prisma e Docker.",
-            "Construcao de aplicacoes server-side renderizadas com Next.js e React.",
-            "Estruturacao de arquitetura de microsservicos e dados para o PcDigital.",
+            "Construi sistemas internos de gestao para a Policia Civil de Alagoas, atuando como lider tecnico e desenvolvedor.",
+            "Liderei projetos de implementacao e melhoria de software.",
+            "Criei e otimizei APIs e solucoes back-end robustas com Node.js e NestJS.",
+            "Construi aplicacoes server-side renderizadas de alta performance com Next.js.",
+            "Estruturei esquemas de microsservicos e arquitetura de dados.",
+            "Entre os sistemas criados se destaca o PcDigital, que revolucionou a gestao de dados policiais e otimizou processos internos do estado.",
+        ],
+    },
+    "i9colab": {
+        "company": "i9Colab - Consultorias, Tecnologia e Inovacao",
+        "role": "Consultor de Desenvolvimento / Software Developer / Full Stack Engineer",
+        "period": "Out 2020 - Jul 2023",
+        "location": "Maceio, AL",
+        "bullets": [
+            "Atuei como Consultor de Desenvolvimento com Sistemas Operacionais (Windows, Linux, Mac), infraestrutura AWS, metodologias ageis (Scrum e Kanban) e linguagens como JavaScript, TypeScript, Python e PHP.",
+            "Trabalhei como Software Developer em sistemas web, aplicativos, sites, e-commerce, automacao industrial e automacoes com bots e Inteligencia Artificial.",
+            "Como Full Stack Engineer, desenvolvi web e mobile com React e React Native, e backend com Node.js, Express, TypeORM e Knex, usando MySQL e MariaDB.",
         ],
     },
     "beyond": {
@@ -135,9 +154,10 @@ BASE_EXPERIENCES = {
         "period": "Mar 2022 - Set 2022",
         "location": "Recife, PE",
         "bullets": [
-            "Desenho, desenvolvimento e manutencao de aplicacoes full stack web.",
-            "Criacao de APIs RESTful com Node.js, incluindo endpoints, autenticacao, validacao e integracao com bancos relacionais e NoSQL.",
-            "Apoio em testes, debugging e qualidade para garantir estabilidade das entregas.",
+            "Desenhei, desenvolvi e mantive aplicacoes full stack (front-end e back-end).",
+            "Criei APIs RESTful com Node.js, definindo endpoints, autenticacao, validacao de dados e tratamento de requisicoes.",
+            "Trabalhei com bancos relacionais e NoSQL (MySQL, PostgreSQL, MongoDB) e cuidei de modelagem, queries eficientes e migrations.",
+            "Apoio em testes unitarios e de integracao, alem de debugging para garantir estabilidade da aplicacao.",
         ],
     },
     "prefeitura": {
@@ -146,8 +166,8 @@ BASE_EXPERIENCES = {
         "period": "Mai 2021 - Jun 2022",
         "location": "Maceio, AL",
         "bullets": [
-            "Desenvolvimento em time com React.js e Next.js no front-end e Node.js com Prisma no back-end.",
-            "Atuacao em sistemas com TypeScript e infraestrutura baseada em CPanel/APanel.",
+            "Atuei em time de desenvolvimento Node.js com front-end em React.js e Next.js usando TypeScript, e back-end em Node.js com Prisma 3.0.",
+            "Trabalhei com infraestrutura baseada em CPanel e APanel.",
         ],
     },
     "zenix": {
@@ -156,31 +176,19 @@ BASE_EXPERIENCES = {
         "period": "Jan 2021 - Out 2021",
         "location": "Porto Alegre, RS",
         "bullets": [
-            "Desenvolvimento mobile freelancer com React Native, Expo, react-native-paper, mapas e tracking com MapView.",
-            "Back-end com Node.js, Express, Knex, JWT e PostgreSQL em ambiente Heroku.",
-            "Atuacao full stack em projetos com JavaScript e TypeScript.",
+            "Atuei como Full Stack Developer em projetos com o time da Zenix Tech, criando bons vinculos profissionais e tecnicos.",
+            "Como freelancer mobile, desenvolvi apps com React Native, react-native-paper, mapas e tracking com MapView, evoluindo bastante no entendimento de contextos e estados.",
+            "No back-end usei Express com Knex, JWT para seguranca por tokens criptografados e PostgreSQL hospedado na Heroku.",
         ],
     },
     "ifal": {
-        "company": "Instituto Federal de Alagoas",
+        "company": "Instituto Federal de Educacao, Ciencia e Tecnologia de Alagoas",
         "role": "Full Stack Engineer / IoT Developer",
         "period": "Out 2018 - Out 2021",
         "location": "Maceio, AL",
         "bullets": [
-            "Colaboracao em projetos PIBITI com desenvolvimento back-end, front-end mobile e modelagem de banco de dados.",
-            "Desenvolvimento de automacoes com microcontroladores conectados via Internet das Coisas (IoT).",
-            "Participacao em pesquisa aplicada e projetos academicos de tecnologia.",
-        ],
-    },
-    "i9colab": {
-        "company": "i9Colab",
-        "role": "Consultor de Desenvolvimento / Software Developer / Full Stack Engineer",
-        "period": "Out 2020 - Jul 2023",
-        "location": "Maceio, AL",
-        "bullets": [
-            "Desenvolvimento de sistemas web, mobile, e-commerce, automacoes industriais, bots e solucoes com IA.",
-            "Atuacao full stack com React, React Native, Node.js, Express, TypeORM, Knex, MySQL e MariaDB.",
-            "Experiencia com infraestrutura AWS, administracao de ambientes, seguranca, Git, Scrum e Kanban.",
+            "Colaborei no time de desenvolvimento do projeto PIBITI do IFAL, atuando com metodologias ageis, back-end, front-end mobile e modelagem de banco de dados.",
+            "Atuei como IoT Developer com automacoes via microcontroladores conectados a Internet das Coisas (IoT), sob orientacao do professor Edison Camilo.",
         ],
     },
 }
@@ -221,17 +229,14 @@ RESUMES = [
     {
         "filename": "luiz-carlos-vilela-mobile-backend",
         "title": "Mobile + Backend",
-        "headline": "Flutter, Kotlin, Swift, Node.js, NestJS, Kafka, RabbitMQ, CI/CD",
-        "badges": ["Flutter - Dart", "Kotlin - Swift", "Node.js - TypeScript", "Kafka - RabbitMQ", "AWS - GCP"],
-        "positioning": (
-            "Versao focada em vagas mobile com forte integracao backend: concepcao de app, arquitetura, "
-            "Design System, estado global, pipelines CI/CD, publicacao em lojas e APIs/microsservicos financeiros."
-        ),
+        "headline": "Flutter, Kotlin, Swift, Node.js, Java, NestJS, Kafka, RabbitMQ, CI/CD",
+        "badges": ["Flutter - Dart", "Kotlin - Swift", "Node.js - TypeScript", "Java - Spring Boot", "Kafka - RabbitMQ", "AWS - GCP"],
         "skills": [
             ("Mobile", ["Flutter", "Dart", "Kotlin", "Swift", "React Native", "Expo", "Design System", "State Management"]),
-            ("Backend", ["Node.js", "TypeScript", "NestJS", "Express", "REST APIs", "Microsservicos", "RPA"]),
+            ("Backend Node.js", ["Node.js", "TypeScript", "NestJS", "Express", "REST APIs", "Microsservicos", "RPA"]),
+            ("Backend Java", ["Java", "Spring Boot", "JUnit", "POO", "Clean Architecture", "SOLID", "SAGA Pattern"]),
             ("Eventos e dados", ["Kafka", "RabbitMQ", "Prisma", "Knex", "PostgreSQL", "Redis", "MySQL"]),
-            ("Entrega", ["CI/CD Mobile", "App Store", "Google Play", "Docker", "AWS", "GCP", "Code Review"]),
+            ("Entrega", ["CI/CD Mobile", "App Store", "Google Play", "Docker", "AWS", "GCP", "Oracle Cloud"]),
         ],
         "experiences": LINKEDIN_EXPERIENCE_ORDER,
         "projects": [
@@ -275,16 +280,13 @@ RESUMES = [
     {
         "filename": "luiz-carlos-vilela-java-angular",
         "title": "Java + Angular",
-        "headline": "Java, Spring Boot, Angular, TypeScript, Node.js, APIs, Microsservicos",
-        "badges": ["Java - Spring Boot", "Angular - TypeScript", "Node.js - NestJS", "Kafka - RabbitMQ", "AWS - GCP"],
-        "positioning": (
-            "Versao focada em vagas full stack Java/Angular, destacando senioridade em backend, APIs, "
-            "arquitetura distribuida, produtos financeiros e experiencia front-end com TypeScript."
-        ),
+        "headline": "Java, Spring Boot, Angular, TypeScript, Microsservicos, APIs",
+        "badges": ["Java - Spring Boot", "Angular - TypeScript", "Microsservicos", "Kafka - RabbitMQ", "AWS - GCP"],
         "skills": [
-            ("Java", ["Java", "Spring Boot", "JUnit", "TDD", "POO", "JDBC", "Clean Architecture", "SOLID"]),
-            ("Angular", ["Angular", "TypeScript", "Angular CLI", "Router", "CRUD", "Bootstrap", "Design Systems"]),
-            ("Backend senior", ["Node.js", "NestJS", "REST APIs", "Microsservicos", "Kafka", "RabbitMQ", "RPA"]),
+            ("Backend Java", ["Java", "Spring Boot", "JUnit", "TDD", "POO", "JDBC", "Clean Architecture", "SOLID"]),
+            ("Angular & Front-end", ["Angular", "TypeScript", "Angular CLI", "Router", "CRUD", "Bootstrap", "Design Systems"]),
+            ("Arquitetura & APIs", ["REST APIs", "Microsservicos", "SAGA Pattern", "Kafka", "RabbitMQ", "Open Finance"]),
+            ("Backend complementar", ["Node.js", "NestJS", "Express", "Prisma", "RPA"]),
             ("Dados e Cloud", ["PostgreSQL", "MySQL", "Redis", "Docker", "GCP", "AWS", "Oracle Cloud"]),
         ],
         "experiences": LINKEDIN_EXPERIENCE_ORDER,
@@ -333,17 +335,14 @@ RESUMES = [
     {
         "filename": "luiz-carlos-vilela-react-java",
         "title": "React + Java",
-        "headline": "React, Next.js, TypeScript, Java, Spring Boot, APIs, FinTech",
-        "badges": ["React - Next.js", "TypeScript", "Java - Spring Boot", "Node.js - NestJS", "AWS - GCP"],
-        "positioning": (
-            "Versao focada em vagas React + Java, enfatizando produtos web escalaveis, integracao com APIs, "
-            "experiencia full stack e fundamentos backend para atuar em times de produto financeiro."
-        ),
+        "headline": "React, Next.js, TypeScript, Java, Spring Boot, Node.js, NestJS",
+        "badges": ["React - Next.js", "TypeScript", "Java - Spring Boot", "Node.js - NestJS", "Kafka - RabbitMQ", "AWS - GCP"],
         "skills": [
-            ("React", ["React", "Next.js", "TypeScript", "Hooks", "React Router", "Redux", "SSR"]),
+            ("React & Front-end", ["React", "Next.js", "TypeScript", "Hooks", "React Router", "Redux", "SSR"]),
             ("UI", ["Material UI", "Styled Components", "Responsividade", "Design Systems", "CSS Grid", "Dark Mode"]),
-            ("Java e backend", ["Java", "Spring Boot", "JUnit", "TDD", "POO", "REST APIs", "Microsservicos"]),
-            ("Arquitetura", ["Node.js", "NestJS", "Kafka", "RabbitMQ", "PostgreSQL", "Docker", "AWS/GCP"]),
+            ("Backend Java", ["Java", "Spring Boot", "JUnit", "TDD", "POO", "REST APIs", "Microsservicos"]),
+            ("Backend Node.js", ["Node.js", "NestJS", "Express", "Prisma", "RPA", "REST APIs"]),
+            ("Arquitetura & Cloud", ["Kafka", "RabbitMQ", "PostgreSQL", "Docker", "AWS", "GCP", "Oracle Cloud"]),
         ],
         "experiences": LINKEDIN_EXPERIENCE_ORDER,
         "projects": [
@@ -940,8 +939,6 @@ def render_resume(resume: dict[str, object]) -> str:
 
       <section class="summary">
         <strong>{esc(resume["headline"])}.</strong> {esc(PROFILE["summary"])}
-        <br />
-        {esc(resume["positioning"])}
       </section>
 
       <section class="metrics">{render_metric_cards()}</section>
