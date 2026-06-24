@@ -4,7 +4,9 @@
 from __future__ import annotations
 
 import argparse
+import base64
 import html
+import mimetypes
 import shutil
 import subprocess
 import tempfile
@@ -15,6 +17,13 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 HTML_DIR = ROOT / "html"
 PDF_DIR = ROOT / "pdf"
+ASSETS_DIR = ROOT / "assets"
+PHOTO_FILENAMES = (
+    "profile-photo.jpg",
+    "profile-photo.jpeg",
+    "profile-photo.png",
+    "profile-photo.webp",
+)
 
 
 PROFILE = {
@@ -314,6 +323,23 @@ def esc(value: object) -> str:
     return html.escape(str(value), quote=True)
 
 
+def profile_photo_data_uri() -> str | None:
+    for filename in PHOTO_FILENAMES:
+        path = ASSETS_DIR / filename
+        if path.exists():
+            mime_type = mimetypes.guess_type(path.name)[0] or "image/jpeg"
+            encoded = base64.b64encode(path.read_bytes()).decode("ascii")
+            return f"data:{mime_type};base64,{encoded}"
+    return None
+
+
+def render_photo() -> str:
+    data_uri = profile_photo_data_uri()
+    if data_uri:
+        return f'<img class="photo" src="{data_uri}" alt="Foto de perfil de {esc(PROFILE["name"])}" />'
+    return '<div class="photo photo-fallback">LC</div>'
+
+
 def render_badges(items: list[str]) -> str:
     return "".join(f"<span>{esc(item)}</span>" for item in items)
 
@@ -343,6 +369,14 @@ def render_skills(groups: list[tuple[str, list[str]]]) -> str:
             """
         )
     return "\n".join(cards)
+
+
+def render_sidebar_stack(groups: list[tuple[str, list[str]]]) -> str:
+    items = []
+    for _, stack_items in groups:
+        items.extend(stack_items[:4])
+    unique_items = list(dict.fromkeys(items))[:18]
+    return "\n".join(f"<li>{esc(item)}</li>" for item in unique_items)
 
 
 def render_experiences(keys: list[str]) -> str:
@@ -394,7 +428,7 @@ def render_projects(projects: list[dict[str, str]]) -> str:
 
 
 def render_compact_list(items: list[str]) -> str:
-    return " &bull; ".join(esc(item) for item in items)
+    return "\n".join(f"<li>{esc(item)}</li>" for item in items)
 
 
 def render_resume(resume: dict[str, object]) -> str:
@@ -406,18 +440,16 @@ def render_resume(resume: dict[str, object]) -> str:
   <title>{esc(PROFILE["name"])} - {esc(resume["title"])}</title>
   <style>
     :root {{
-      --bg: #151515;
-      --panel: #222321;
-      --panel-2: #2d2f2c;
-      --text: #e8e2d8;
-      --muted: #b7afa4;
-      --line: #3b3d39;
-      --blue: #3c8eea;
-      --green: #95d5b2;
-      --cream: #f2dfb5;
-      --lavender: #d8cdfc;
-      --print-bg: #ffffff;
-      --print-text: #20242b;
+      --teal: #2f8274;
+      --teal-dark: #24675c;
+      --teal-soft: #e7f2ef;
+      --ink: #2d333a;
+      --muted: #69727c;
+      --line: #dbe3e8;
+      --paper: #ffffff;
+      --panel: #f6f8fa;
+      --accent: #2166a7;
+      --gold: #d9a441;
     }}
 
     * {{
@@ -425,48 +457,144 @@ def render_resume(resume: dict[str, object]) -> str:
     }}
 
     body {{
-      margin: 0;
-      background: #0f0f0f;
-      color: var(--text);
+      background: #e8ecef;
+      color: var(--ink);
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 12px;
-      line-height: 1.45;
+      font-size: 11.3px;
+      line-height: 1.42;
+      margin: 0;
     }}
 
     a {{
-      color: var(--blue);
+      color: var(--accent);
       text-decoration: none;
     }}
 
     .page {{
-      background: var(--bg);
+      background: var(--paper);
+      display: grid;
+      grid-template-columns: 64mm 1fr;
       margin: 0 auto;
       min-height: 297mm;
-      padding: 13mm 15mm;
+      overflow: hidden;
       width: 210mm;
     }}
 
-    header {{
-      align-items: flex-start;
-      border-bottom: 1px solid var(--line);
-      display: grid;
-      gap: 18px;
-      grid-template-columns: 1.25fr 0.85fr;
-      padding-bottom: 13px;
+    .sidebar {{
+      background: linear-gradient(180deg, var(--teal) 0%, var(--teal-dark) 100%);
+      color: #fff;
+      padding: 12mm 8mm;
+    }}
+
+    .photo-wrap {{
+      display: flex;
+      justify-content: center;
+      margin: 0 0 13mm;
+      position: relative;
+    }}
+
+    .photo-wrap::before {{
+      background: repeating-linear-gradient(0deg, rgba(255,255,255,.18), rgba(255,255,255,.18) 1px, transparent 1px, transparent 4px);
+      content: "";
+      height: 42mm;
+      left: -8mm;
+      position: absolute;
+      right: -8mm;
+      top: 7mm;
+    }}
+
+    .photo {{
+      background: #dfe7ea;
+      border: 5px solid rgba(255,255,255,.42);
+      border-radius: 50%;
+      box-shadow: 0 10px 24px rgba(0,0,0,.18);
+      height: 38mm;
+      object-fit: cover;
+      position: relative;
+      width: 38mm;
+      z-index: 1;
+    }}
+
+    .photo-fallback {{
+      align-items: center;
+      color: var(--teal-dark);
+      display: flex;
+      font-size: 26px;
+      font-weight: 900;
+      justify-content: center;
+      letter-spacing: .08em;
+    }}
+
+    .side-section {{
+      margin-bottom: 9mm;
+    }}
+
+    .side-title {{
+      align-items: center;
+      color: #fff;
+      display: flex;
+      font-size: 11px;
+      font-weight: 900;
+      gap: 7px;
+      letter-spacing: .08em;
+      margin: 0 0 8px;
+      text-transform: uppercase;
+    }}
+
+    .side-title::before {{
+      background: #fff;
+      content: "";
+      display: inline-block;
+      height: 3px;
+      width: 14px;
+    }}
+
+    .side-title::after {{
+      display: none;
+    }}
+
+    .side-section p,
+    .side-section li {{
+      color: rgba(255,255,255,.9);
+      margin: 0 0 4px;
+    }}
+
+    .side-section ul {{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }}
+
+    .contact-list a {{
+      color: #fff;
+      overflow-wrap: anywhere;
+    }}
+
+    .main {{
+      min-width: 0;
+      padding: 13mm 12mm 12mm;
+    }}
+
+    .top {{
+      border-bottom: 2px solid var(--teal);
+      margin-bottom: 12px;
+      padding-bottom: 12px;
     }}
 
     h1 {{
-      color: #fff;
-      font-size: 26px;
-      line-height: 1;
-      margin: 0 0 4px;
+      color: var(--ink);
+      font-size: 27px;
+      letter-spacing: .02em;
+      line-height: 1.06;
+      margin: 0 0 6px;
+      text-transform: uppercase;
     }}
 
     .subtitle {{
       color: var(--muted);
-      font-size: 15px;
-      font-weight: 700;
-      margin: 0 0 8px;
+      font-size: 14px;
+      font-weight: 800;
+      margin: 0 0 9px;
     }}
 
     .badges {{
@@ -476,79 +604,67 @@ def render_resume(resume: dict[str, object]) -> str:
     }}
 
     .badges span {{
-      background: var(--lavender);
+      background: var(--teal-soft);
       border-radius: 999px;
-      color: #232323;
-      font-size: 11px;
-      font-weight: 800;
-      padding: 3px 8px;
-    }}
-
-    .badges span:nth-child(2n) {{
-      background: var(--green);
+      color: var(--teal-dark);
+      font-size: 10.5px;
+      font-weight: 900;
+      padding: 4px 8px;
     }}
 
     .badges span:nth-child(3n) {{
-      background: var(--cream);
-    }}
-
-    .contact {{
-      color: var(--muted);
-      display: grid;
-      gap: 3px;
-      justify-items: end;
-      text-align: right;
+      background: #fff2d6;
+      color: #765419;
     }}
 
     .summary {{
       background: var(--panel);
-      border-left: 3px solid var(--blue);
-      border-radius: 6px;
-      color: #d8d0c4;
-      font-size: 13px;
-      margin: 16px 0 12px;
-      padding: 13px 15px;
+      border-left: 4px solid var(--teal);
+      border-radius: 7px;
+      margin: 0 0 10px;
+      padding: 10px 12px;
     }}
 
     .summary strong {{
-      color: #fff;
+      color: var(--teal-dark);
     }}
 
     .metrics {{
       display: grid;
       gap: 8px;
       grid-template-columns: repeat(3, 1fr);
-      margin-bottom: 14px;
+      margin: 0 0 12px;
     }}
 
     .metric {{
-      background: var(--panel);
-      border-radius: 6px;
-      padding: 9px 10px;
+      background: var(--teal-soft);
+      border-radius: 7px;
+      min-width: 0;
+      padding: 8px 9px;
     }}
 
     .metric strong {{
-      color: var(--blue);
+      color: var(--accent);
       display: block;
       font-size: 16px;
       line-height: 1;
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }}
 
     .metric span {{
-      color: var(--muted);
+      color: var(--ink);
       display: block;
-      font-weight: 700;
+      font-weight: 800;
     }}
 
     h2 {{
       align-items: center;
-      color: var(--muted);
+      color: var(--teal-dark);
       display: flex;
-      font-size: 13px;
+      font-size: 12.5px;
       gap: 8px;
-      letter-spacing: 0.12em;
-      margin: 15px 0 8px;
+      letter-spacing: .11em;
+      margin: 13px 0 8px;
       text-transform: uppercase;
     }}
 
@@ -560,25 +676,26 @@ def render_resume(resume: dict[str, object]) -> str:
     }}
 
     h3 {{
-      color: #fff;
-      font-size: 13px;
+      color: var(--ink);
+      font-size: 12.5px;
       margin: 0;
     }}
 
     .skills {{
       display: grid;
-      gap: 8px;
+      gap: 7px;
       grid-template-columns: repeat(2, 1fr);
     }}
 
     .skill-card,
     .experience-card,
     .project-card {{
-      background: var(--panel-2);
+      background: #fff;
       border: 1px solid var(--line);
-      border-radius: 7px;
+      border-radius: 8px;
       break-inside: avoid;
-      padding: 9px 11px;
+      box-shadow: 0 3px 10px rgba(22, 38, 48, .05);
+      padding: 8px 10px;
     }}
 
     .chips {{
@@ -589,25 +706,24 @@ def render_resume(resume: dict[str, object]) -> str:
     }}
 
     .chips span {{
-      background: #202220;
-      border: 1px solid #454842;
+      background: var(--panel);
       border-radius: 999px;
-      color: #d8d0c4;
-      font-size: 10.5px;
-      font-weight: 700;
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 800;
       padding: 3px 7px;
     }}
 
     .experience-card {{
-      margin-bottom: 8px;
+      margin-bottom: 7px;
     }}
 
     .experience-head,
     .project-head {{
       display: grid;
-      gap: 10px;
+      gap: 8px;
       grid-template-columns: 1fr auto;
-      margin-bottom: 6px;
+      margin-bottom: 5px;
     }}
 
     .experience-head p,
@@ -618,7 +734,9 @@ def render_resume(resume: dict[str, object]) -> str:
     .meta {{
       color: var(--muted);
       display: grid;
+      font-size: 10.5px;
       justify-items: end;
+      line-height: 1.25;
       text-align: right;
       white-space: nowrap;
     }}
@@ -633,37 +751,36 @@ def render_resume(resume: dict[str, object]) -> str:
     }}
 
     li::marker {{
-      color: var(--blue);
+      color: var(--teal);
     }}
 
     .project-grid {{
       display: grid;
-      gap: 8px;
+      gap: 7px;
       grid-template-columns: 1fr 1fr;
     }}
 
     .kind {{
-      color: var(--blue);
+      color: var(--teal);
       display: block;
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: 0.08em;
+      font-size: 9.5px;
+      font-weight: 900;
+      letter-spacing: .08em;
       margin-bottom: 2px;
       text-transform: uppercase;
     }}
 
-    .stack {{
-      color: var(--green);
-      font-size: 11px;
-      font-weight: 800;
+    .project-head a {{
+      font-size: 9.5px;
+      max-width: 42mm;
+      overflow-wrap: anywhere;
+      text-align: right;
     }}
 
-    .footer {{
-      color: var(--muted);
-      display: grid;
-      gap: 5px;
-      grid-template-columns: 1fr;
-      margin-top: 10px;
+    .stack {{
+      color: var(--accent);
+      font-size: 10.5px;
+      font-weight: 900;
     }}
 
     @page {{
@@ -673,7 +790,7 @@ def render_resume(resume: dict[str, object]) -> str:
 
     @media print {{
       body {{
-        background: var(--print-bg);
+        background: #fff;
       }}
 
       .page {{
@@ -684,20 +801,26 @@ def render_resume(resume: dict[str, object]) -> str:
 
     @media screen and (max-width: 780px) {{
       .page {{
+        grid-template-columns: 1fr;
         min-height: auto;
-        padding: 20px;
         width: 100%;
       }}
 
-      header,
+      .sidebar,
+      .main {{
+        padding: 22px;
+      }}
+
       .metrics,
       .skills,
-      .project-grid {{
+      .project-grid,
+      .experience-head,
+      .project-head {{
         grid-template-columns: 1fr;
       }}
 
-      .contact,
-      .meta {{
+      .meta,
+      .project-head a {{
         justify-items: start;
         text-align: left;
       }}
@@ -706,47 +829,65 @@ def render_resume(resume: dict[str, object]) -> str:
 </head>
 <body>
   <main class="page">
-    <header>
-      <section>
+    <aside class="sidebar">
+      <div class="photo-wrap">{render_photo()}</div>
+
+      <section class="side-section">
+        <h2 class="side-title">Contato</h2>
+        <ul class="contact-list">
+          <li>{esc(PROFILE["phone"])}</li>
+          <li>{esc(PROFILE["email"])}</li>
+          <li><a href="https://{esc(PROFILE["linkedin"])}">{esc(PROFILE["linkedin"])}</a></li>
+          <li><a href="https://{esc(PROFILE["github"])}">{esc(PROFILE["github"])}</a></li>
+          <li>{esc(PROFILE["location"])}</li>
+        </ul>
+      </section>
+
+      <section class="side-section">
+        <h2 class="side-title">Stacks-chave</h2>
+        <ul>{render_sidebar_stack(resume["skills"])}</ul>
+      </section>
+
+      <section class="side-section">
+        <h2 class="side-title">Formacao</h2>
+        <ul>{render_compact_list(EDUCATION)}</ul>
+      </section>
+
+      <section class="side-section">
+        <h2 class="side-title">Certificacoes</h2>
+        <ul>{render_compact_list(CERTIFICATIONS)}</ul>
+      </section>
+    </aside>
+
+    <section class="main">
+      <header class="top">
         <h1>{esc(PROFILE["name"])}</h1>
-        <p class="subtitle">{esc(PROFILE["title"])} - {esc(resume["title"])} - {esc(PROFILE["focus"])}</p>
+        <p class="subtitle">{esc(PROFILE["title"])} | {esc(resume["title"])} | {esc(PROFILE["focus"])}</p>
         <div class="badges">{render_badges(resume["badges"])}</div>
+      </header>
+
+      <section class="summary">
+        <strong>{esc(resume["headline"])}.</strong> {esc(PROFILE["summary"])}
+        <br />
+        {esc(resume["positioning"])}
       </section>
-      <section class="contact">
-        <span>{esc(PROFILE["phone"])}</span>
-        <span>{esc(PROFILE["email"])}</span>
-        <a href="https://{esc(PROFILE["linkedin"])}">{esc(PROFILE["linkedin"])}</a>
-        <a href="https://{esc(PROFILE["github"])}">{esc(PROFILE["github"])}</a>
-        <span>{esc(PROFILE["location"])}</span>
+
+      <section class="metrics">{render_metric_cards()}</section>
+
+      <section>
+        <h2>Competencias por stack</h2>
+        <div class="skills">{render_skills(resume["skills"])}</div>
       </section>
-    </header>
 
-    <section class="summary">
-      <strong>{esc(resume["headline"])}.</strong> {esc(PROFILE["summary"])}
-      <br />
-      {esc(resume["positioning"])}
-    </section>
+      <section>
+        <h2>Experiencia profissional</h2>
+        {render_experiences(resume["experiences"])}
+      </section>
 
-    <section class="metrics">{render_metric_cards()}</section>
-
-    <section>
-      <h2>Stacks prioritarias</h2>
-      <div class="skills">{render_skills(resume["skills"])}</div>
-    </section>
-
-    <section>
-      <h2>Experiencia</h2>
-      {render_experiences(resume["experiences"])}
-    </section>
-
-    <section>
-      <h2>Projetos e entregas em destaque</h2>
-      <div class="project-grid">{render_projects(resume["projects"])}</div>
-    </section>
-
-    <section class="footer">
-      <span><strong>Formacao:</strong> {render_compact_list(EDUCATION)}</span>
-      <span><strong>Certificacoes:</strong> {render_compact_list(CERTIFICATIONS)}</span>
+      <section>
+        <h2>Projetos e entregas em destaque</h2>
+        <div class="project-grid">{render_projects(resume["projects"])}</div>
+      </section>
     </section>
   </main>
 </body>

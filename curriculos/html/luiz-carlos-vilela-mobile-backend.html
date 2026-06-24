@@ -6,18 +6,16 @@
   <title>Luiz Carlos Vilela dos Santos - Mobile + Backend</title>
   <style>
     :root {
-      --bg: #151515;
-      --panel: #222321;
-      --panel-2: #2d2f2c;
-      --text: #e8e2d8;
-      --muted: #b7afa4;
-      --line: #3b3d39;
-      --blue: #3c8eea;
-      --green: #95d5b2;
-      --cream: #f2dfb5;
-      --lavender: #d8cdfc;
-      --print-bg: #ffffff;
-      --print-text: #20242b;
+      --teal: #2f8274;
+      --teal-dark: #24675c;
+      --teal-soft: #e7f2ef;
+      --ink: #2d333a;
+      --muted: #69727c;
+      --line: #dbe3e8;
+      --paper: #ffffff;
+      --panel: #f6f8fa;
+      --accent: #2166a7;
+      --gold: #d9a441;
     }
 
     * {
@@ -25,48 +23,144 @@
     }
 
     body {
-      margin: 0;
-      background: #0f0f0f;
-      color: var(--text);
+      background: #e8ecef;
+      color: var(--ink);
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 12px;
-      line-height: 1.45;
+      font-size: 11.3px;
+      line-height: 1.42;
+      margin: 0;
     }
 
     a {
-      color: var(--blue);
+      color: var(--accent);
       text-decoration: none;
     }
 
     .page {
-      background: var(--bg);
+      background: var(--paper);
+      display: grid;
+      grid-template-columns: 64mm 1fr;
       margin: 0 auto;
       min-height: 297mm;
-      padding: 13mm 15mm;
+      overflow: hidden;
       width: 210mm;
     }
 
-    header {
-      align-items: flex-start;
-      border-bottom: 1px solid var(--line);
-      display: grid;
-      gap: 18px;
-      grid-template-columns: 1.25fr 0.85fr;
-      padding-bottom: 13px;
+    .sidebar {
+      background: linear-gradient(180deg, var(--teal) 0%, var(--teal-dark) 100%);
+      color: #fff;
+      padding: 12mm 8mm;
+    }
+
+    .photo-wrap {
+      display: flex;
+      justify-content: center;
+      margin: 0 0 13mm;
+      position: relative;
+    }
+
+    .photo-wrap::before {
+      background: repeating-linear-gradient(0deg, rgba(255,255,255,.18), rgba(255,255,255,.18) 1px, transparent 1px, transparent 4px);
+      content: "";
+      height: 42mm;
+      left: -8mm;
+      position: absolute;
+      right: -8mm;
+      top: 7mm;
+    }
+
+    .photo {
+      background: #dfe7ea;
+      border: 5px solid rgba(255,255,255,.42);
+      border-radius: 50%;
+      box-shadow: 0 10px 24px rgba(0,0,0,.18);
+      height: 38mm;
+      object-fit: cover;
+      position: relative;
+      width: 38mm;
+      z-index: 1;
+    }
+
+    .photo-fallback {
+      align-items: center;
+      color: var(--teal-dark);
+      display: flex;
+      font-size: 26px;
+      font-weight: 900;
+      justify-content: center;
+      letter-spacing: .08em;
+    }
+
+    .side-section {
+      margin-bottom: 9mm;
+    }
+
+    .side-title {
+      align-items: center;
+      color: #fff;
+      display: flex;
+      font-size: 11px;
+      font-weight: 900;
+      gap: 7px;
+      letter-spacing: .08em;
+      margin: 0 0 8px;
+      text-transform: uppercase;
+    }
+
+    .side-title::before {
+      background: #fff;
+      content: "";
+      display: inline-block;
+      height: 3px;
+      width: 14px;
+    }
+
+    .side-title::after {
+      display: none;
+    }
+
+    .side-section p,
+    .side-section li {
+      color: rgba(255,255,255,.9);
+      margin: 0 0 4px;
+    }
+
+    .side-section ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .contact-list a {
+      color: #fff;
+      overflow-wrap: anywhere;
+    }
+
+    .main {
+      min-width: 0;
+      padding: 13mm 12mm 12mm;
+    }
+
+    .top {
+      border-bottom: 2px solid var(--teal);
+      margin-bottom: 12px;
+      padding-bottom: 12px;
     }
 
     h1 {
-      color: #fff;
-      font-size: 26px;
-      line-height: 1;
-      margin: 0 0 4px;
+      color: var(--ink);
+      font-size: 27px;
+      letter-spacing: .02em;
+      line-height: 1.06;
+      margin: 0 0 6px;
+      text-transform: uppercase;
     }
 
     .subtitle {
       color: var(--muted);
-      font-size: 15px;
-      font-weight: 700;
-      margin: 0 0 8px;
+      font-size: 14px;
+      font-weight: 800;
+      margin: 0 0 9px;
     }
 
     .badges {
@@ -76,79 +170,67 @@
     }
 
     .badges span {
-      background: var(--lavender);
+      background: var(--teal-soft);
       border-radius: 999px;
-      color: #232323;
-      font-size: 11px;
-      font-weight: 800;
-      padding: 3px 8px;
-    }
-
-    .badges span:nth-child(2n) {
-      background: var(--green);
+      color: var(--teal-dark);
+      font-size: 10.5px;
+      font-weight: 900;
+      padding: 4px 8px;
     }
 
     .badges span:nth-child(3n) {
-      background: var(--cream);
-    }
-
-    .contact {
-      color: var(--muted);
-      display: grid;
-      gap: 3px;
-      justify-items: end;
-      text-align: right;
+      background: #fff2d6;
+      color: #765419;
     }
 
     .summary {
       background: var(--panel);
-      border-left: 3px solid var(--blue);
-      border-radius: 6px;
-      color: #d8d0c4;
-      font-size: 13px;
-      margin: 16px 0 12px;
-      padding: 13px 15px;
+      border-left: 4px solid var(--teal);
+      border-radius: 7px;
+      margin: 0 0 10px;
+      padding: 10px 12px;
     }
 
     .summary strong {
-      color: #fff;
+      color: var(--teal-dark);
     }
 
     .metrics {
       display: grid;
       gap: 8px;
       grid-template-columns: repeat(3, 1fr);
-      margin-bottom: 14px;
+      margin: 0 0 12px;
     }
 
     .metric {
-      background: var(--panel);
-      border-radius: 6px;
-      padding: 9px 10px;
+      background: var(--teal-soft);
+      border-radius: 7px;
+      min-width: 0;
+      padding: 8px 9px;
     }
 
     .metric strong {
-      color: var(--blue);
+      color: var(--accent);
       display: block;
       font-size: 16px;
       line-height: 1;
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }
 
     .metric span {
-      color: var(--muted);
+      color: var(--ink);
       display: block;
-      font-weight: 700;
+      font-weight: 800;
     }
 
     h2 {
       align-items: center;
-      color: var(--muted);
+      color: var(--teal-dark);
       display: flex;
-      font-size: 13px;
+      font-size: 12.5px;
       gap: 8px;
-      letter-spacing: 0.12em;
-      margin: 15px 0 8px;
+      letter-spacing: .11em;
+      margin: 13px 0 8px;
       text-transform: uppercase;
     }
 
@@ -160,25 +242,26 @@
     }
 
     h3 {
-      color: #fff;
-      font-size: 13px;
+      color: var(--ink);
+      font-size: 12.5px;
       margin: 0;
     }
 
     .skills {
       display: grid;
-      gap: 8px;
+      gap: 7px;
       grid-template-columns: repeat(2, 1fr);
     }
 
     .skill-card,
     .experience-card,
     .project-card {
-      background: var(--panel-2);
+      background: #fff;
       border: 1px solid var(--line);
-      border-radius: 7px;
+      border-radius: 8px;
       break-inside: avoid;
-      padding: 9px 11px;
+      box-shadow: 0 3px 10px rgba(22, 38, 48, .05);
+      padding: 8px 10px;
     }
 
     .chips {
@@ -189,25 +272,24 @@
     }
 
     .chips span {
-      background: #202220;
-      border: 1px solid #454842;
+      background: var(--panel);
       border-radius: 999px;
-      color: #d8d0c4;
-      font-size: 10.5px;
-      font-weight: 700;
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 800;
       padding: 3px 7px;
     }
 
     .experience-card {
-      margin-bottom: 8px;
+      margin-bottom: 7px;
     }
 
     .experience-head,
     .project-head {
       display: grid;
-      gap: 10px;
+      gap: 8px;
       grid-template-columns: 1fr auto;
-      margin-bottom: 6px;
+      margin-bottom: 5px;
     }
 
     .experience-head p,
@@ -218,7 +300,9 @@
     .meta {
       color: var(--muted);
       display: grid;
+      font-size: 10.5px;
       justify-items: end;
+      line-height: 1.25;
       text-align: right;
       white-space: nowrap;
     }
@@ -233,37 +317,36 @@
     }
 
     li::marker {
-      color: var(--blue);
+      color: var(--teal);
     }
 
     .project-grid {
       display: grid;
-      gap: 8px;
+      gap: 7px;
       grid-template-columns: 1fr 1fr;
     }
 
     .kind {
-      color: var(--blue);
+      color: var(--teal);
       display: block;
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: 0.08em;
+      font-size: 9.5px;
+      font-weight: 900;
+      letter-spacing: .08em;
       margin-bottom: 2px;
       text-transform: uppercase;
     }
 
-    .stack {
-      color: var(--green);
-      font-size: 11px;
-      font-weight: 800;
+    .project-head a {
+      font-size: 9.5px;
+      max-width: 42mm;
+      overflow-wrap: anywhere;
+      text-align: right;
     }
 
-    .footer {
-      color: var(--muted);
-      display: grid;
-      gap: 5px;
-      grid-template-columns: 1fr;
-      margin-top: 10px;
+    .stack {
+      color: var(--accent);
+      font-size: 10.5px;
+      font-weight: 900;
     }
 
     @page {
@@ -273,7 +356,7 @@
 
     @media print {
       body {
-        background: var(--print-bg);
+        background: #fff;
       }
 
       .page {
@@ -284,20 +367,26 @@
 
     @media screen and (max-width: 780px) {
       .page {
+        grid-template-columns: 1fr;
         min-height: auto;
-        padding: 20px;
         width: 100%;
       }
 
-      header,
+      .sidebar,
+      .main {
+        padding: 22px;
+      }
+
       .metrics,
       .skills,
-      .project-grid {
+      .project-grid,
+      .experience-head,
+      .project-head {
         grid-template-columns: 1fr;
       }
 
-      .contact,
-      .meta {
+      .meta,
+      .project-head a {
         justify-items: start;
         text-align: left;
       }
@@ -306,28 +395,71 @@
 </head>
 <body>
   <main class="page">
-    <header>
-      <section>
+    <aside class="sidebar">
+      <div class="photo-wrap"><div class="photo photo-fallback">LC</div></div>
+
+      <section class="side-section">
+        <h2 class="side-title">Contato</h2>
+        <ul class="contact-list">
+          <li>82 9 9189-0441</li>
+          <li>luizcarlosvilela@outlook.com.br</li>
+          <li><a href="https://linkedin.com/in/luiz-carlos-vilela">linkedin.com/in/luiz-carlos-vilela</a></li>
+          <li><a href="https://github.com/LuizCarlosVilela">github.com/LuizCarlosVilela</a></li>
+          <li>Maceio, Alagoas, Brasil</li>
+        </ul>
+      </section>
+
+      <section class="side-section">
+        <h2 class="side-title">Stacks-chave</h2>
+        <ul><li>Flutter</li>
+<li>Dart</li>
+<li>Kotlin</li>
+<li>Swift</li>
+<li>Node.js</li>
+<li>TypeScript</li>
+<li>NestJS</li>
+<li>Express</li>
+<li>Kafka</li>
+<li>RabbitMQ</li>
+<li>Prisma</li>
+<li>Knex</li>
+<li>CI/CD Mobile</li>
+<li>App Store</li>
+<li>Google Play</li>
+<li>Docker</li></ul>
+      </section>
+
+      <section class="side-section">
+        <h2 class="side-title">Formacao</h2>
+        <ul><li>Instituto Federal de Alagoas - Desenvolvimento de Sistemas e Comunicacao (2018 - 2021)</li>
+<li>Harvard University - CS50 / Computer Science, e-Learning (2021 - 2022)</li>
+<li>Google - Tecnologia da Informacao, e-Learning (2020 - 2021)</li></ul>
+      </section>
+
+      <section class="side-section">
+        <h2 class="side-title">Certificacoes</h2>
+        <ul><li>Rio Innovation Week</li>
+<li>Arquitetura de Redes de Computadores</li>
+<li>Desenvolvimento avancado com JavaScript ES6</li>
+<li>Praticas avancadas em projetos com ReactJS</li>
+<li>Web Developer</li></ul>
+      </section>
+    </aside>
+
+    <section class="main">
+      <header class="top">
         <h1>Luiz Carlos Vilela dos Santos</h1>
-        <p class="subtitle">Engenheiro de Software Senior - Mobile + Backend - Backend - Mobile - RPA</p>
+        <p class="subtitle">Engenheiro de Software Senior | Mobile + Backend | Backend - Mobile - RPA</p>
         <div class="badges"><span>Flutter - Dart</span><span>Kotlin - Swift</span><span>Node.js - TypeScript</span><span>Kafka - RabbitMQ</span><span>AWS - GCP</span></div>
-      </section>
-      <section class="contact">
-        <span>82 9 9189-0441</span>
-        <span>luizcarlosvilela@outlook.com.br</span>
-        <a href="https://linkedin.com/in/luiz-carlos-vilela">linkedin.com/in/luiz-carlos-vilela</a>
-        <a href="https://github.com/LuizCarlosVilela">github.com/LuizCarlosVilela</a>
-        <span>Maceio, Alagoas, Brasil</span>
-      </section>
-    </header>
+      </header>
 
-    <section class="summary">
-      <strong>Flutter, Kotlin, Swift, Node.js, NestJS, Kafka, RabbitMQ, CI/CD.</strong> Engenheiro de Software Senior com ampla experiencia em sistemas de alta complexidade no setor de FinTech e Open Finance. Especialista em arquitetura de microsservicos, desenvolvimento mobile com Flutter e automacoes inteligentes (RPA). Historico comprovado liderando times tecnicos e construindo produtos que atendem mais de 1 milhao de clientes, processando centenas de milhoes em transacoes financeiras.
-      <br />
-      Versao focada em vagas mobile com forte integracao backend: concepcao de app, arquitetura, Design System, estado global, pipelines CI/CD, publicacao em lojas e APIs/microsservicos financeiros.
-    </section>
+      <section class="summary">
+        <strong>Flutter, Kotlin, Swift, Node.js, NestJS, Kafka, RabbitMQ, CI/CD.</strong> Engenheiro de Software Senior com ampla experiencia em sistemas de alta complexidade no setor de FinTech e Open Finance. Especialista em arquitetura de microsservicos, desenvolvimento mobile com Flutter e automacoes inteligentes (RPA). Historico comprovado liderando times tecnicos e construindo produtos que atendem mais de 1 milhao de clientes, processando centenas de milhoes em transacoes financeiras.
+        <br />
+        Versao focada em vagas mobile com forte integracao backend: concepcao de app, arquitetura, Design System, estado global, pipelines CI/CD, publicacao em lojas e APIs/microsservicos financeiros.
+      </section>
 
-    <section class="metrics">
+      <section class="metrics">
         <div class="metric">
           <strong>+1M</strong>
           <span>clientes PF ativos no app Mentore</span>
@@ -346,9 +478,9 @@
         </div>
         </section>
 
-    <section>
-      <h2>Stacks prioritarias</h2>
-      <div class="skills">
+      <section>
+        <h2>Competencias por stack</h2>
+        <div class="skills">
             <section class="skill-card">
               <h3>Mobile</h3>
               <div class="chips"><span>Flutter</span><span>Dart</span><span>Kotlin</span><span>Swift</span><span>React Native</span><span>Expo</span><span>Design System</span><span>State Management</span></div>
@@ -372,11 +504,11 @@
               <div class="chips"><span>CI/CD Mobile</span><span>App Store</span><span>Google Play</span><span>Docker</span><span>AWS</span><span>GCP</span><span>Code Review</span></div>
             </section>
             </div>
-    </section>
+      </section>
 
-    <section>
-      <h2>Experiencia</h2>
-      
+      <section>
+        <h2>Experiencia profissional</h2>
+        
             <article class="experience-card">
               <div class="experience-head">
                 <div>
@@ -467,11 +599,11 @@
 <li>Experiencia com infraestrutura AWS, administracao de ambientes, seguranca, Git, Scrum e Kanban.</li></ul>
             </article>
             
-    </section>
+      </section>
 
-    <section>
-      <h2>Projetos e entregas em destaque</h2>
-      <div class="project-grid">
+      <section>
+        <h2>Projetos e entregas em destaque</h2>
+        <div class="project-grid">
             <article class="project-card">
               <div class="project-head">
                 <div>
@@ -523,11 +655,7 @@
               <p>Comunicacao entre servicos de pedidos e pagamentos usando mensageria e arquitetura orientada a eventos.</p>
             </article>
             </div>
-    </section>
-
-    <section class="footer">
-      <span><strong>Formacao:</strong> Instituto Federal de Alagoas - Desenvolvimento de Sistemas e Comunicacao (2018 - 2021) &bull; Harvard University - CS50 / Computer Science, e-Learning (2021 - 2022) &bull; Google - Tecnologia da Informacao, e-Learning (2020 - 2021)</span>
-      <span><strong>Certificacoes:</strong> Rio Innovation Week &bull; Arquitetura de Redes de Computadores &bull; Desenvolvimento avancado com JavaScript ES6 &bull; Praticas avancadas em projetos com ReactJS &bull; Web Developer</span>
+      </section>
     </section>
   </main>
 </body>
